@@ -1,7 +1,5 @@
-﻿#include <iostream>
+#include <iostream>
 #include <math.h>
-#include <locale>
-#include <Windows.h>
 
 using namespace std;
 
@@ -129,13 +127,26 @@ void ex_5() {
 }
 
 int main() {
-    setlocale(0, "Rus");
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
-    ex_1();
-    ex_2();
-    ex_3();
-    ex_4();
-    ex_5();
-    return 0;
+    char input;
+    cout << "Введите упражнение(1, 2, 3, 4, 5) ";
+    cin >> input;
+    switch (input) {
+        case '1':
+            ex_1();
+            break;
+        case '2':
+            ex_2();
+            break;
+        case '3':
+            ex_3();
+            break;
+        case '4':
+            ex_4();
+            break;
+        case '5':
+            ex_5();
+            break;
+        default:
+            cout << "нет такого упражнения";
+    }
 }
