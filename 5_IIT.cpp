@@ -240,13 +240,16 @@ void ex_5_36(){
 }
 
 int main() {
-    ex_1();
-    ex_2();
-    ex_3_4();
-    ex_3_23();
-    ex_4_19();
-    ex_4_35();
-    ex_5_57();
-    ex_5_36();
-    return 0;
+    string input;
+    cout << "enter ex(1, 2, 3_4, 3_23, 4_19, 4_35, 5_57, 5_36) ";
+    cin >> input;
+    if (input == "1") ex_1();
+    else if (input == "2") ex_2();
+    else if (input == "3_4") ex_3_4();
+    else if (input == "3_23") ex_3_23();
+    else if (input == "4_19") ex_4_19();
+    else if (input == "4_35") ex_4_35();
+    else if (input == "5_57") ex_5_57();
+    else if (input == "5_26") ex_5_36();
+    else cout << "no such ex";
 }
