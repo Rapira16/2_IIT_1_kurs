@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "Windows.h"
 #include <math.h>
 #include <vector>
 #include<algorithm>
@@ -244,13 +243,13 @@ void ex_6(){
         cout << numbers[i] << " ";
     }
     if ((count(numbers.begin(), numbers.end(), 1) > 3) ||
-            (count(numbers.begin(), numbers.end(), 1) > 3) ||
-            (count(numbers.begin(), numbers.end(), 5) > 1) ||
-            (count(numbers.begin(), numbers.end(), 10) > 3) ||
-            (count(numbers.begin(), numbers.end(), 50) > 1) ||
-            (count(numbers.begin(), numbers.end(), 100) > 3) ||
-            (count(numbers.begin(), numbers.end(), 500) > 1) ||
-            (count(numbers.begin(), numbers.end(), 1000) > 3)){
+        (count(numbers.begin(), numbers.end(), 1) > 3) ||
+        (count(numbers.begin(), numbers.end(), 5) > 1) ||
+        (count(numbers.begin(), numbers.end(), 10) > 3) ||
+        (count(numbers.begin(), numbers.end(), 50) > 1) ||
+        (count(numbers.begin(), numbers.end(), 100) > 3) ||
+        (count(numbers.begin(), numbers.end(), 500) > 1) ||
+        (count(numbers.begin(), numbers.end(), 1000) > 3)){
         cout << "no such rome number" << endl;
     }
     if (size(numbers) > 2){
@@ -393,7 +392,7 @@ void ex_9(){
     for (int i = 0; i < size(number); i++){
         if ((47 < (int)number[i]) && ((int)number[i] < 58)){
             num.push_back(((int)number[i]) - 48);
-         } else if ((65 <= (int)number[i]) && ((int)number[i] <= 90)){
+        } else if ((65 <= (int)number[i]) && ((int)number[i] <= 90)){
             num.push_back((int)(number[i]) - 55);
         }
     }
@@ -418,14 +417,35 @@ void ex_9(){
 }
 
 int main() {
-    //ex_1();
-    //ex_2();
-    //ex_3();
-    //ex_4();
-    //ex_6();
-    //
-    //ex_7();
-    //ex_8();
-    //ex_9();
-    return 0;
+    char input;
+    cout << "enter ex(1, 2, 3, 4, 6, 7, 8, 9) ";
+    cin >> input;
+    switch (input) {
+        case '1':
+            ex_1();
+            break;
+        case '2':
+            ex_2();
+            break;
+        case '3':
+            ex_3();
+            break;
+        case '4':
+            ex_4();
+            break;
+        case '6':
+            ex_6();
+            break;
+        case '7':
+            ex_7();
+            break;
+        case '8':
+            ex_8();
+            break;
+        case '9':
+            ex_9();
+            break;
+        default:
+            cout << "no such ex";
+    }
 }
