@@ -61,16 +61,16 @@ void ex_4() {
 
     if (a == 0) {
         if (b == 0) {
-        if (c == 0) {
-            cout << "any x" << endl;
+            if (c == 0) {
+                cout << "any x" << endl;
+            }
+            else {
+                cout << "no rational roots" << endl;
+            }
         }
         else {
-            cout << "no rational roots" << endl;
+            cout << "The equation root is " << -c / b << endl;
         }
-    }
-    else {
-        cout << "The equation root is " << -c / b << endl;
-    }
     }
     else {
         D = b * b - 4 * a * c;
@@ -106,11 +106,27 @@ void ex_5(){
 }
 
 
-int main()
-{
-    ex_1();
-    ex_2();
-    ex_3();
-    ex_4();
-    ex_5();
+int main() {
+    char input;
+    cout << "choose ex(1, 2, 3, 4, 5) ";
+    cin >> input;
+    switch (input) {
+        case '1':
+            ex_1();
+            break;
+        case '2':
+            ex_2();
+            break;
+        case '3':
+            ex_3();
+            break;
+        case '4':
+            ex_4();
+            break;
+        case '5':
+            ex_5();
+            break;
+        default:
+            cout << "no such ex";
+    }
 }
