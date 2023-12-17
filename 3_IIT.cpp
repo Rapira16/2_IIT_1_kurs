@@ -82,43 +82,41 @@ void ex_4() {
 	cout << "\n";
 }
 
+
 void ex_5() {
-	string alphabet;
+    string alphabet;
 
-	cout << "Enter string len 30 ";
-	if (size(alphabet) > 30) {
-		cout << "Error";
-	}
-	cin >> alphabet;
-	cout << alphabet;
+    cout << "Enter string len 30 ";
+    cin >> alphabet;
+    if (size(alphabet) != 30) {
+        cout << "Error";
+    }
 
-	string sym;
-	double arr[30];
-	for (int i = 0; i < 30; i++) {
-		double code;
-		if ((int)alphabet[i] < 97) {
-			code = (int)alphabet[i] + 0.1;
-			arr[i] = code;
-		} else {
-			code = (int)alphabet[i];
-			arr[i] = code;
-		}
-	}
 
-	for (int i = 0; i < 30; i++) {
-		for (int j = 0; j < 29; j++) {
-			if (arr[j] > arr[j + 1]) {
-				int b = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = b;
-			}
-		}
-	}
-	
-	for (int i = 0; i < 30; i++) {
-		if (arr[i] - (int)arr[i])
-	}
-	cout << "\n" << alphabet;
+    float arr[30];
+    for (int i = 0; i < 30; i++) {
+        if ((int)alphabet[i] < 97) {
+            arr[i] = ((int)alphabet[i]) - 0.1;
+            cout << "arr[i] " << arr[i] << "\n";
+        } else {
+            arr[i] = ((int)alphabet[i]) - 32;
+            cout << "arr[i] " << arr[i] << "\n";
+        }
+    }
+
+    sort(begin(arr), end(arr));
+
+    for (int i = 0; i < 30; i++){
+        cout << "\n sort " << arr[i];
+    }
+
+    for (int i = 0; i < 30; i++) {
+        if ((arr[i] != (int)arr[i])){
+            cout <<static_cast<char>((int)arr[i] + 1);
+        } else {
+            cout << static_cast<char>(((int)arr[i]) + 32);
+        }
+    }
 }
 
 
